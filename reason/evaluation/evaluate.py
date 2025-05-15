@@ -74,12 +74,16 @@ if __name__ == "__main__":
     # TODO(ziyu): move into some configuration file
     if "math-shepherd" in config.RM.lower():
         prm_step_tag = "ки\n"
+    elif "qwen2.5-math" in config.RM.lower():
+        prm_step_tag = "<extra_0>\n"
     else:
         # assume qwen
         prm_step_tag = "\n\n\n\n\n "
-    prm_format_str = "{question} {answer}"
+    prm_format_str = "Question:{question}\nAnswer:{answer}"
 
-    if "qwen" in config.LM.lower():
+    if "qwen2.5-math" in config.LM.lower():
+        lm_step_tag = "<extra_0>\n"
+    elif "qwen" in config.LM.lower():
         lm_step_tag = "\n\n"
     else:
         lm_step_tag = "ки\n"
