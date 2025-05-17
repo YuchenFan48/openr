@@ -1,0 +1,31 @@
+2025-05-17 03:44:54 | ERROR | stderr | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2025-05-17 03:44:54 | ERROR | stderr | 
+2025-05-17 03:44:56 | ERROR | stderr | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.72s/it]
+2025-05-17 03:44:56 | ERROR | stderr | 
+2025-05-17 03:44:58 | ERROR | stderr | Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.81s/it]
+2025-05-17 03:44:58 | ERROR | stderr | 
+2025-05-17 03:45:00 | ERROR | stderr | Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:05<00:01,  1.78s/it]
+2025-05-17 03:45:00 | ERROR | stderr | 
+2025-05-17 03:45:01 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.79s/it]
+2025-05-17 03:45:01 | ERROR | stderr | 
+2025-05-17 03:45:01 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.78s/it]
+2025-05-17 03:45:01 | ERROR | stderr | 
+2025-05-17 03:45:01 | ERROR | stderr | 
+2025-05-17 03:45:20 | INFO | model_worker | Loading the model ['Qwen2.5-7B-Instruct'] on worker 5f08db51, worker type: vLLM worker...
+2025-05-17 03:45:20 | INFO | model_worker | Register to controller
+2025-05-17 03:45:20 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m907150[0m]
+2025-05-17 03:45:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-17 03:45:20 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-17 03:45:20 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30011[0m (Press CTRL+C to quit)
+2025-05-17 03:45:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38032 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:45:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38042 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:45:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38052 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:45:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38058 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:45:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60674 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:45:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60684 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:46:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60690 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:46:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60702 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:46:03 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-17 03:46:03 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-17 03:46:03 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-17 03:46:03 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m907150[0m]

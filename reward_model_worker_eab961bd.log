@@ -1,0 +1,33 @@
+2025-05-15 04:58:24 | INFO | reward_model_worker | args: Namespace(host='0.0.0.0', port=30012, worker_address='http://0.0.0.0:30012', controller_address='http://0.0.0.0:28777', model_path='/fs-computility/mabasic/shared/models/reward_model/Qwen2.5-Math-PRM-7B', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2025-05-15 04:58:24 | INFO | reward_model_worker | Loading the model ['Qwen2.5-Math-PRM-7B'] on worker eab961bd ...
+2025-05-15 04:58:24 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                                                                                                          | 0/4 [00:00<?, ?it/s]
+2025-05-15 04:58:27 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                                                                                                          | 0/4 [00:02<?, ?it/s]
+2025-05-15 04:58:27 | ERROR | stderr | 
+2025-05-15 04:58:27 | ERROR | stderr | Traceback (most recent call last):
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2025-05-15 04:58:27 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/runpy.py", line 86, in _run_code
+2025-05-15 04:58:27 | ERROR | stderr |     exec(code, run_globals)
+2025-05-15 04:58:27 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/reward_model_worker.py", line 257, in <module>
+2025-05-15 04:58:27 | ERROR | stderr |     args, worker = create_model_worker()
+2025-05-15 04:58:27 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/reward_model_worker.py", line 229, in create_model_worker
+2025-05-15 04:58:27 | ERROR | stderr |     worker = ModelWorker(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/reward_model_worker.py", line 87, in __init__
+2025-05-15 04:58:27 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 353, in load_model
+2025-05-15 04:58:27 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastchat/model/model_adapter.py", line 1697, in load_model
+2025-05-15 04:58:27 | ERROR | stderr |     model = AutoModel.from_pretrained(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+2025-05-15 04:58:27 | ERROR | stderr |     return model_class.from_pretrained(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/transformers/modeling_utils.py", line 279, in _wrapper
+2025-05-15 04:58:27 | ERROR | stderr |     return func(*args, **kwargs)
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4399, in from_pretrained
+2025-05-15 04:58:27 | ERROR | stderr |     ) = cls._load_pretrained_model(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4833, in _load_pretrained_model
+2025-05-15 04:58:27 | ERROR | stderr |     disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+2025-05-15 04:58:27 | ERROR | stderr |     return func(*args, **kwargs)
+2025-05-15 04:58:27 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/transformers/modeling_utils.py", line 789, in _load_state_dict_into_meta_model
+2025-05-15 04:58:27 | ERROR | stderr |     param = param.to(casting_dtype)
+2025-05-15 04:58:27 | ERROR | stderr | KeyboardInterrupt

@@ -1,0 +1,50 @@
+2025-05-17 06:35:33 | ERROR | stderr | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2025-05-17 06:35:33 | ERROR | stderr | 
+2025-05-17 06:35:34 | ERROR | stderr | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.74s/it]
+2025-05-17 06:35:34 | ERROR | stderr | 
+2025-05-17 06:35:36 | ERROR | stderr | Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.82s/it]
+2025-05-17 06:35:36 | ERROR | stderr | 
+2025-05-17 06:35:38 | ERROR | stderr | Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:05<00:01,  1.78s/it]
+2025-05-17 06:35:38 | ERROR | stderr | 
+2025-05-17 06:35:40 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.79s/it]
+2025-05-17 06:35:40 | ERROR | stderr | 
+2025-05-17 06:35:40 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.79s/it]
+2025-05-17 06:35:40 | ERROR | stderr | 
+2025-05-17 06:35:40 | ERROR | stderr | 
+2025-05-17 06:35:58 | INFO | model_worker | Loading the model ['Qwen2.5-7B-Instruct'] on worker 0c327532, worker type: vLLM worker...
+2025-05-17 06:35:58 | INFO | model_worker | Register to controller
+2025-05-17 06:35:58 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m974748[0m]
+2025-05-17 06:35:58 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-17 06:35:58 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-17 06:35:58 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30011[0m (Press CTRL+C to quit)
+2025-05-17 06:36:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56652 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 06:36:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56658 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 06:36:43 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 2. worker_id: 0c327532. 
+2025-05-17 06:37:28 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 2. worker_id: 0c327532. 
+2025-05-17 06:38:13 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 2. worker_id: 0c327532. 
+2025-05-17 06:38:58 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 2. worker_id: 0c327532. 
+2025-05-17 06:39:22 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-17 06:39:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-17 06:39:22 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-17 06:39:22 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m974748[0m]
+2025-05-17 06:39:22 | ERROR | stderr | Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7fe694bf96c0>
+2025-05-17 06:39:22 | ERROR | stderr | Traceback (most recent call last):
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 480, in matmul_ext_update_autotune_table
+2025-05-17 06:39:22 | ERROR | stderr |     fp16_matmul._update_autotune_table()
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 458, in _update_autotune_table
+2025-05-17 06:39:22 | ERROR | stderr |     TritonMatmul._update_autotune_table(__class__.__name__ + "_4d_kernel", __class__._4d_kernel)
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 185, in _update_autotune_table
+2025-05-17 06:39:22 | ERROR | stderr |     cache_manager = AutotuneCacheManager(cache_key)
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 90, in __init__
+2025-05-17 06:39:22 | ERROR | stderr |     TritonCacheDir.warn_if_nfs(self.cache_dir)
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 47, in warn_if_nfs
+2025-05-17 06:39:22 | ERROR | stderr |     if is_nfs_path(cache_dir) and not TritonCacheDir._warning_printed:
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 30, in is_nfs_path
+2025-05-17 06:39:22 | ERROR | stderr |     output = subprocess.check_output(['df', '-T', path], encoding='utf-8')
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/subprocess.py", line 421, in check_output
+2025-05-17 06:39:22 | ERROR | stderr |     return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/subprocess.py", line 505, in run
+2025-05-17 06:39:22 | ERROR | stderr |     stdout, stderr = process.communicate(input, timeout=timeout)
+2025-05-17 06:39:22 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/subprocess.py", line 1141, in communicate
+2025-05-17 06:39:22 | ERROR | stderr |     stdout = self.stdout.read()
+2025-05-17 06:39:22 | ERROR | stderr | KeyboardInterrupt:

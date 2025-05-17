@@ -67,6 +67,7 @@ class FastChatRemoteCaller(LanguageModelCallingFunction):
         prompt_token = []
         num_tokens = []
         cumulative_logprob = []
+        logprobs = []
         logp_avg_by_len = []
         finish_reason = []
 
@@ -74,7 +75,6 @@ class FastChatRemoteCaller(LanguageModelCallingFunction):
             res = _generate_fastchat(
                 query_str=input_str,
                 model_name=self.model_name,
-                n=1,  # this is not used
                 temperature=config.temperature,
                 top_p=config.top_p,
                 top_k=config.top_k,

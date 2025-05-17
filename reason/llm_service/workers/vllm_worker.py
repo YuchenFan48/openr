@@ -101,7 +101,6 @@ class VLLMWorker(BaseModelWorker):
             n=n,
             temperature=temperature,
             top_p=top_p,
-            use_beam_search=use_beam_search,
             stop=list(stop),
             stop_token_ids=stop_token_ids,
             max_tokens=max_new_tokens,
@@ -115,6 +114,10 @@ class VLLMWorker(BaseModelWorker):
         results_generator = engine.generate(context, sampling_params, request_id)
 
         async for request_output in results_generator:
+            logprob_lists = [
+                [list(d.values())[0].logprob for d in output.logprobs]
+                for output in request_output.outputs
+            ]
             prompt = request_output.prompt
             if echo:
                 text_outputs = [
@@ -147,6 +150,7 @@ class VLLMWorker(BaseModelWorker):
                     if len(request_output.outputs) == 1
                     else [output.finish_reason for output in request_output.outputs]
                 ),
+                "logprobs": logprob_lists,
             }
             yield (json.dumps(ret) + "\0").encode()
 

@@ -1,0 +1,55 @@
+2025-05-17 03:39:11 | ERROR | stderr | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2025-05-17 03:39:11 | ERROR | stderr | 
+2025-05-17 03:39:15 | ERROR | stderr | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:04<00:12,  4.07s/it]
+2025-05-17 03:39:15 | ERROR | stderr | 
+2025-05-17 03:39:20 | ERROR | stderr | Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:08<00:08,  4.07s/it]
+2025-05-17 03:39:20 | ERROR | stderr | 
+2025-05-17 03:39:23 | ERROR | stderr | Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:11<00:03,  3.93s/it]
+2025-05-17 03:39:23 | ERROR | stderr | 
+2025-05-17 03:39:27 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:15<00:00,  3.99s/it]
+2025-05-17 03:39:27 | ERROR | stderr | 
+2025-05-17 03:39:27 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:15<00:00,  4.00s/it]
+2025-05-17 03:39:27 | ERROR | stderr | 
+2025-05-17 03:39:27 | ERROR | stderr | 
+2025-05-17 03:39:47 | INFO | model_worker | Loading the model ['Qwen2.5-7B-Instruct'] on worker 6d1cc4fd, worker type: vLLM worker...
+2025-05-17 03:39:47 | INFO | model_worker | Register to controller
+2025-05-17 03:39:47 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m898628[0m]
+2025-05-17 03:39:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-17 03:39:47 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-17 03:39:47 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30011[0m (Press CTRL+C to quit)
+2025-05-17 03:39:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47404 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:39:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47416 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:39:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47426 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:39:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47436 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 03:40:32 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 4. worker_id: 6d1cc4fd. 
+2025-05-17 03:40:38 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-17 03:40:38 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m898628[0m]
+2025-05-17 03:40:38 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/asyncio/runners.py", line 44, in run
+2025-05-17 03:40:38 | ERROR | stderr |     return loop.run_until_complete(main)
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/loop.pyx", line 1512, in uvloop.loop.Loop.run_until_complete
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/loop.pyx", line 1505, in uvloop.loop.Loop.run_until_complete
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/loop.pyx", line 1379, in uvloop.loop.Loop.run_forever
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/loop.pyx", line 557, in uvloop.loop.Loop._run
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/loop.pyx", line 476, in uvloop.loop.Loop._on_idle
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2025-05-17 03:40:38 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+2025-05-17 03:40:38 | ERROR | stderr |     with self.capture_signals():
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/contextlib.py", line 142, in __exit__
+2025-05-17 03:40:38 | ERROR | stderr |     next(self.gen)
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/server.py", line 330, in capture_signals
+2025-05-17 03:40:38 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2025-05-17 03:40:38 | ERROR | stderr | KeyboardInterrupt
+2025-05-17 03:40:38 | ERROR | stderr | 
+2025-05-17 03:40:38 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2025-05-17 03:40:38 | ERROR | stderr | 
+2025-05-17 03:40:38 | ERROR | stderr | Traceback (most recent call last):
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 699, in lifespan
+2025-05-17 03:40:38 | ERROR | stderr |     await receive()
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2025-05-17 03:40:38 | ERROR | stderr |     return await self.receive_queue.get()
+2025-05-17 03:40:38 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/asyncio/queues.py", line 159, in get
+2025-05-17 03:40:38 | ERROR | stderr |     await getter
+2025-05-17 03:40:38 | ERROR | stderr | asyncio.exceptions.CancelledError
+2025-05-17 03:40:38 | ERROR | stderr | 

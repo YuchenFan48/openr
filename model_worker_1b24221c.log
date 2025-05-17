@@ -1,0 +1,120 @@
+2025-05-17 04:30:44 | ERROR | stderr | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2025-05-17 04:30:44 | ERROR | stderr | 
+2025-05-17 04:30:45 | ERROR | stderr | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.77s/it]
+2025-05-17 04:30:45 | ERROR | stderr | 
+2025-05-17 04:30:47 | ERROR | stderr | Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.85s/it]
+2025-05-17 04:30:47 | ERROR | stderr | 
+2025-05-17 04:30:49 | ERROR | stderr | Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:05<00:01,  1.82s/it]
+2025-05-17 04:30:49 | ERROR | stderr | 
+2025-05-17 04:30:51 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.83s/it]
+2025-05-17 04:30:51 | ERROR | stderr | 
+2025-05-17 04:30:51 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.83s/it]
+2025-05-17 04:30:51 | ERROR | stderr | 
+2025-05-17 04:30:51 | ERROR | stderr | 
+2025-05-17 04:31:11 | INFO | model_worker | Loading the model ['Qwen2.5-7B-Instruct'] on worker 1b24221c, worker type: vLLM worker...
+2025-05-17 04:31:11 | INFO | model_worker | Register to controller
+2025-05-17 04:31:11 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m942506[0m]
+2025-05-17 04:31:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-17 04:31:11 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-17 04:31:11 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30011[0m (Press CTRL+C to quit)
+2025-05-17 04:31:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38586 - "[1mPOST /worker_generate HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-05-17 04:31:28 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-05-17 04:31:28 | ERROR | stderr | Traceback (most recent call last):
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+2025-05-17 04:31:28 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     await app(scope, receive, sender)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 714, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 734, in app
+2025-05-17 04:31:28 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+2025-05-17 04:31:28 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+2025-05-17 04:31:28 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     await app(scope, receive, sender)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+2025-05-17 04:31:28 | ERROR | stderr |     response = await f(request)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+2025-05-17 04:31:28 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-05-17 04:31:28 | ERROR | stderr |     return await dependant.call(**values)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 199, in api_generate
+2025-05-17 04:31:28 | ERROR | stderr |     output = await worker.generate(params)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 157, in generate
+2025-05-17 04:31:28 | ERROR | stderr |     async for x in self.generate_stream(params):
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 117, in generate_stream
+2025-05-17 04:31:28 | ERROR | stderr |     print(request_output.json())
+2025-05-17 04:31:28 | ERROR | stderr | AttributeError: 'RequestOutput' object has no attribute 'json'
+2025-05-17 04:31:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38596 - "[1mPOST /worker_generate HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-05-17 04:31:28 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-05-17 04:31:28 | ERROR | stderr | Traceback (most recent call last):
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+2025-05-17 04:31:28 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     await app(scope, receive, sender)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 714, in __call__
+2025-05-17 04:31:28 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 734, in app
+2025-05-17 04:31:28 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+2025-05-17 04:31:28 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+2025-05-17 04:31:28 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     raise exc
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-05-17 04:31:28 | ERROR | stderr |     await app(scope, receive, sender)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+2025-05-17 04:31:28 | ERROR | stderr |     response = await f(request)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+2025-05-17 04:31:28 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-05-17 04:31:28 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-05-17 04:31:28 | ERROR | stderr |     return await dependant.call(**values)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 199, in api_generate
+2025-05-17 04:31:28 | ERROR | stderr |     output = await worker.generate(params)
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 157, in generate
+2025-05-17 04:31:28 | ERROR | stderr |     async for x in self.generate_stream(params):
+2025-05-17 04:31:28 | ERROR | stderr |   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 117, in generate_stream
+2025-05-17 04:31:28 | ERROR | stderr |     print(request_output.json())
+2025-05-17 04:31:28 | ERROR | stderr | AttributeError: 'RequestOutput' object has no attribute 'json'
+2025-05-17 04:31:56 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1022, locked=False). call_ct: 2. worker_id: 1b24221c. 
+2025-05-17 04:32:41 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1022, locked=False). call_ct: 2. worker_id: 1b24221c. 
+2025-05-17 04:33:26 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1022, locked=False). call_ct: 2. worker_id: 1b24221c. 
+2025-05-17 04:34:11 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1022, locked=False). call_ct: 2. worker_id: 1b24221c. 
+2025-05-17 04:34:56 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1022, locked=False). call_ct: 2. worker_id: 1b24221c. 
+2025-05-17 04:35:28 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-17 04:35:28 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-17 04:35:28 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-17 04:35:28 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m942506[0m]

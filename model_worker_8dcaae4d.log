@@ -1,0 +1,52 @@
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]: Traceback (most recent call last):
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     return _run_code(code, main_globals, None,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/runpy.py", line 86, in _run_code
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     exec(code, run_globals)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/fs-computility/mabasic/fanyuchen/openr/reason/llm_service/workers/vllm_worker.py", line 269, in <module>
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     engine = AsyncLLMEngine.from_engine_args(engine_args)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/engine/async_llm_engine.py", line 573, in from_engine_args
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     engine = cls(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/engine/async_llm_engine.py", line 473, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.engine = self._engine_class(*args, **kwargs)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/engine/async_llm_engine.py", line 257, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     super().__init__(*args, **kwargs)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 317, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.model_executor = executor_class(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/executor/executor_base.py", line 47, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self._init_executor()
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/executor/gpu_executor.py", line 40, in _init_executor
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.driver_worker.load_model()
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/worker/worker.py", line 183, in load_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.model_runner.load_model()
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/worker/model_runner.py", line 999, in load_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.model = get_model(model_config=self.model_config,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     return loader.load_model(model_config=model_config,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/model_loader/loader.py", line 358, in load_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     model = _initialize_model(model_config, self.load_config,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/model_loader/loader.py", line 172, in _initialize_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     return build_model(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/model_loader/loader.py", line 157, in build_model
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     return model_class(config=hf_config,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/qwen2.py", line 341, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.model = Qwen2Model(config, cache_config, quant_config)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/qwen2.py", line 243, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.start_layer, self.end_layer, self.layers = make_layers(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/utils.py", line 248, in make_layers
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     [PPMissingLayer() for _ in range(start_layer)] + [
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/utils.py", line 249, in <listcomp>
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/qwen2.py", line 245, in <lambda>
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     lambda prefix: Qwen2DecoderLayer(config=config,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/qwen2.py", line 184, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.mlp = Qwen2MLP(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/models/qwen2.py", line 69, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.down_proj = RowParallelLinear(intermediate_size,
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/layers/linear.py", line 975, in __init__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     self.quant_method.create_weights(
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     weight = Parameter(torch.empty(sum(output_partition_sizes),
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]:     return func(*args, **kwargs)
+2025-05-15 04:58:02 | ERROR | stderr | [rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 130.00 MiB. GPU 0 has a total capacity of 79.35 GiB of which 14.19 MiB is free. Process 184897 has 67.43 GiB memory in use. Process 188690 has 11.89 GiB memory in use. Of the allocated memory 11.36 GiB is allocated by PyTorch, and 49.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

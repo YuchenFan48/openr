@@ -1,0 +1,45 @@
+2025-05-15 12:32:02 | INFO | reward_model_worker | args: Namespace(host='0.0.0.0', port=30012, worker_address='http://0.0.0.0:30012', controller_address='http://0.0.0.0:28777', model_path='/fs-computility/mabasic/shared/models/reward_model/Qwen2.5-Math-PRM-7B', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2025-05-15 12:32:02 | INFO | reward_model_worker | Loading the model ['Qwen2.5-Math-PRM-7B'] on worker 4e6dede1 ...
+2025-05-15 12:32:02 | ERROR | stderr | Loading checkpoint shards:   0%|                                                  | 0/4 [00:00<?, ?it/s]
+2025-05-15 12:32:06 | ERROR | stderr | Loading checkpoint shards:  25%|██████████▌                               | 1/4 [00:03<00:10,  3.47s/it]
+2025-05-15 12:32:11 | ERROR | stderr | Loading checkpoint shards:  50%|█████████████████████                     | 2/4 [00:08<00:08,  4.25s/it]
+2025-05-15 12:32:16 | ERROR | stderr | Loading checkpoint shards:  75%|███████████████████████████████▌          | 3/4 [00:13<00:04,  4.53s/it]
+2025-05-15 12:32:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 4/4 [00:15<00:00,  3.85s/it]
+2025-05-15 12:32:18 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 4/4 [00:15<00:00,  3.98s/it]
+2025-05-15 12:32:18 | ERROR | stderr | 
+2025-05-15 12:32:21 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m724310[0m]
+2025-05-15 12:32:21 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-15 12:32:21 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-15 12:32:21 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30012[0m (Press CTRL+C to quit)
+2025-05-15 12:32:33 | INFO | stdout | tensor([[1.]], device='cuda:0')
+2025-05-15 12:32:33 | INFO | stdout | tensor([[0.9883]], device='cuda:0')
+2025-05-15 12:32:33 | INFO | stdout | tensor([[0.9590]], device='cuda:0')
+2025-05-15 12:32:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40260 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:35 | INFO | stdout | tensor([[1., 1.]], device='cuda:0')
+2025-05-15 12:32:35 | INFO | stdout | tensor([[1., 1.]], device='cuda:0')
+2025-05-15 12:32:35 | INFO | stdout | tensor([[1., 1.]], device='cuda:0')
+2025-05-15 12:32:35 | INFO | stdout | tensor([[1., 1.]], device='cuda:0')
+2025-05-15 12:32:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35826 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:37 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966]], device='cuda:0')
+2025-05-15 12:32:37 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9980]], device='cuda:0')
+2025-05-15 12:32:37 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9971]], device='cuda:0')
+2025-05-15 12:32:37 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9922]], device='cuda:0')
+2025-05-15 12:32:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35840 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:38 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 0.9995]], device='cuda:0')
+2025-05-15 12:32:38 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 0.9995]], device='cuda:0')
+2025-05-15 12:32:38 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 1.0000]], device='cuda:0')
+2025-05-15 12:32:38 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 1.0000]], device='cuda:0')
+2025-05-15 12:32:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35844 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:39 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 0.9995, 1.0000]], device='cuda:0')
+2025-05-15 12:32:39 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 0.9995, 1.0000]], device='cuda:0')
+2025-05-15 12:32:40 | INFO | stdout | tensor([[1.0000, 1.0000, 0.9966, 0.9995, 1.0000]], device='cuda:0')
+2025-05-15 12:32:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35850 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:43 | INFO | stdout | tensor([[0.9985]], device='cuda:0')
+2025-05-15 12:32:43 | INFO | stdout | tensor([[0.9849]], device='cuda:0')
+2025-05-15 12:32:43 | INFO | stdout | tensor([[0.9966]], device='cuda:0')
+2025-05-15 12:32:43 | INFO | stdout | tensor([[0.9912]], device='cuda:0')
+2025-05-15 12:32:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35866 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:32:47 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-15 12:32:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-15 12:32:47 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-15 12:32:47 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m724310[0m]

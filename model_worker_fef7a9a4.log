@@ -1,0 +1,30 @@
+2025-05-17 03:59:13 | ERROR | stderr | Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+2025-05-17 03:59:13 | ERROR | stderr | 
+2025-05-17 03:59:15 | ERROR | stderr | Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:05,  1.72s/it]
+2025-05-17 03:59:15 | ERROR | stderr | 
+2025-05-17 03:59:16 | ERROR | stderr | Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.80s/it]
+2025-05-17 03:59:16 | ERROR | stderr | 
+2025-05-17 03:59:18 | ERROR | stderr | Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:05<00:01,  1.76s/it]
+2025-05-17 03:59:18 | ERROR | stderr | 
+2025-05-17 03:59:20 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.77s/it]
+2025-05-17 03:59:20 | ERROR | stderr | 
+2025-05-17 03:59:20 | ERROR | stderr | Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:07<00:00,  1.77s/it]
+2025-05-17 03:59:20 | ERROR | stderr | 
+2025-05-17 03:59:20 | ERROR | stderr | 
+2025-05-17 03:59:45 | INFO | model_worker | Loading the model ['Qwen2.5-7B-Instruct'] on worker fef7a9a4, worker type: vLLM worker...
+2025-05-17 03:59:45 | INFO | model_worker | Register to controller
+2025-05-17 03:59:45 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m925348[0m]
+2025-05-17 03:59:45 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-17 03:59:45 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-17 03:59:45 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30011[0m (Press CTRL+C to quit)
+2025-05-17 04:00:30 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: None. call_ct: 0. worker_id: fef7a9a4. 
+2025-05-17 04:01:15 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: None. call_ct: 0. worker_id: fef7a9a4. 
+2025-05-17 04:01:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46208 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 04:01:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46224 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 04:01:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46232 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 04:01:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46244 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-05-17 04:02:00 | INFO | model_worker | Send heart beat. Models: ['Qwen2.5-7B-Instruct']. Semaphore: Semaphore(value=1024, locked=False). call_ct: 4. worker_id: fef7a9a4. 
+2025-05-17 04:02:20 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-17 04:02:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-17 04:02:20 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-17 04:02:20 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m925348[0m]

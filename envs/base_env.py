@@ -152,7 +152,7 @@ class CoTEnv(BaseEnv):
         info = {"api_completion_token": api_completion_token}
         return self.get_state(), info
 
-    def step(self, action, update_legal_action=True):
+    def step(self, action, update_legal_action=True, deepen=False):
         self.action_history.append(action)
         state = self.get_state()
         reward = self.get_reward()
@@ -163,7 +163,7 @@ class CoTEnv(BaseEnv):
             while cnt < 3:
                 cnt += 1
                 try:
-                    self._legal_actions, api_completion_token = self.update_legal_actions()
+                    self._legal_actions, api_completion_token = self.update_legal_actions(deepen=deepen)
                     info["api_completion_token"] = api_completion_token
                     break
                 except NoLegalActionException as e:
@@ -191,30 +191,51 @@ class CoTEnv(BaseEnv):
         # This step may change the token count
         return action
 
-    def update_legal_actions(self):
-        result: ConcatedLMGenResult = self.llm_gen_fn(
-            input_str=self.get_state(),
-            config=LMCallingConfig(
-                n=self.config["max_actions"],
-                stop_str=self.sep,
-                include_stop_str_in_output=True,
-                **self.config["generation_config"]
-            ),
-        )
+    def update_legal_actions(self, deepen=False):
+        if deepen:
+            result: ConcatedLMGenResult = self.llm_gen_fn(
+                input_str=self.get_state(),
+                config=LMCallingConfig(
+                    stop_str=self.sep,
+                    include_stop_str_in_output=True,
+                    **self.config["generation_config"]
+                ),
+            )
+        else:
+            result: ConcatedLMGenResult = self.llm_gen_fn(
+                input_str=self.get_state(),
+                config=LMCallingConfig(
+                    n=self.config["max_actions"],
+                    stop_str=self.sep,
+                    include_stop_str_in_output=True,
+                    **self.config["generation_config"]
+                ),
+            )
         texts = result.text
         logps_avg_by_len = result.logp_avg_by_len
+        logprobs = result.logprobs
+        entropy_list = []
+        var_entropy_list = []
+        for logprob in logprobs:
+            logprob = torch.tensor(logprob)
+            p = torch.exp(logprob)
+            entropy = -torch.sum(p * logprob, dim=-1)
+            diff = logprob + entropy.unsqueeze(-1)
+            var_entropy = torch.sum(p * diff**2, dim=-1)
+            entropy_list.append(entropy)
+            var_entropy_list.append(var_entropy)
         token_len = result.num_tokens
         text_list, prob_list, num_token_list = [], [], []
+        logprob_list = []
         finish_reason_list = []
         next_state_terminated = {}
-
+        save_entropy_list = []
+        save_var_entropy_list = []
         for i in range(len(texts)):
             # XXX: this process can be improve or moved to other place
             # this is a pre-judge of terminal flag or certain action, by
             # whether the text-generation is stop by the <eos> or stop_str
-            
             terminated = not texts[i].endswith(self.sep)
-
             processed_act = self.post_process_act(texts[i])
             if (
                 len(processed_act) > 0
@@ -224,9 +245,12 @@ class CoTEnv(BaseEnv):
             ):
                 text_list.append(processed_act)
                 prob_list.append(logps_avg_by_len[i])
+                logprob_list.append(result.cumulative_logprob[i])
                 num_token_list.append(token_len[i])
                 finish_reason_list.append(result.finish_reason[i])
                 next_state_terminated[processed_act] = terminated
+                save_entropy_list.append(entropy_list[i])
+                save_var_entropy_list.append(var_entropy_list[i])
 
         if len(prob_list) == 0:
             print_with_rank("state: {}".format(self.get_state()))
@@ -244,9 +268,11 @@ class CoTEnv(BaseEnv):
                 "prob": prob,
                 "num_token": n_token,
                 "finish_reason": finish_reason,
+                "entropy": entropy,
+                "var_entropy": var_entropy,
             }
-            for action, prob, n_token, finish_reason in zip(
-                text_list, prob_list, num_token_list, finish_reason_list
+            for action, prob, n_token, finish_reason, entropy, var_entropy in zip(
+                text_list, prob_list, num_token_list, finish_reason_list, save_entropy_list, save_var_entropy_list
             )
         ]
 

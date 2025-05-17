@@ -1,0 +1,60 @@
+2025-05-15 12:24:02 | INFO | reward_model_worker | args: Namespace(host='0.0.0.0', port=30012, worker_address='http://0.0.0.0:30012', controller_address='http://0.0.0.0:28777', model_path='/fs-computility/mabasic/fanyuchen/peiyi9979/math-shepherd-mistral-7b-prm', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2025-05-15 12:24:02 | INFO | reward_model_worker | Loading the model ['math-shepherd-mistral-7b-prm'] on worker 3565d5f2 ...
+2025-05-15 12:24:03 | ERROR | stderr | Loading checkpoint shards:   0%|                                                  | 0/2 [00:00<?, ?it/s]
+2025-05-15 12:24:15 | ERROR | stderr | Loading checkpoint shards:  50%|█████████████████████                     | 1/2 [00:12<00:12, 12.68s/it]
+2025-05-15 12:24:24 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 2/2 [00:21<00:00, 10.51s/it]
+2025-05-15 12:24:24 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 2/2 [00:21<00:00, 10.84s/it]
+2025-05-15 12:24:24 | ERROR | stderr | 
+2025-05-15 12:24:27 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m714344[0m]
+2025-05-15 12:24:27 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-15 12:24:27 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-15 12:24:27 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30012[0m (Press CTRL+C to quit)
+2025-05-15 12:25:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54270 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54276 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54288 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53318 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53320 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53334 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53346 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53362 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53364 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55932 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55944 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55950 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40888 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40902 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40912 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40918 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40928 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40934 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:25:36 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-15 12:25:36 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m714344[0m]
+2025-05-15 12:25:36 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/asyncio/runners.py", line 44, in run
+2025-05-15 12:25:36 | ERROR | stderr |     return loop.run_until_complete(main)
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 1512, in uvloop.loop.Loop.run_until_complete
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 1505, in uvloop.loop.Loop.run_until_complete
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 1379, in uvloop.loop.Loop.run_forever
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 557, in uvloop.loop.Loop._run
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 476, in uvloop.loop.Loop._on_idle
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2025-05-15 12:25:36 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+2025-05-15 12:25:36 | ERROR | stderr |     with self.capture_signals():
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/contextlib.py", line 142, in __exit__
+2025-05-15 12:25:36 | ERROR | stderr |     next(self.gen)
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/server.py", line 330, in capture_signals
+2025-05-15 12:25:36 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2025-05-15 12:25:36 | ERROR | stderr | KeyboardInterrupt
+2025-05-15 12:25:36 | ERROR | stderr | 
+2025-05-15 12:25:36 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2025-05-15 12:25:36 | ERROR | stderr | 
+2025-05-15 12:25:36 | ERROR | stderr | Traceback (most recent call last):
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/starlette/routing.py", line 699, in lifespan
+2025-05-15 12:25:36 | ERROR | stderr |     await receive()
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2025-05-15 12:25:36 | ERROR | stderr |     return await self.receive_queue.get()
+2025-05-15 12:25:36 | ERROR | stderr |   File "/root/miniconda3/envs/open_reasoner/lib/python3.10/asyncio/queues.py", line 159, in get
+2025-05-15 12:25:36 | ERROR | stderr |     await getter
+2025-05-15 12:25:36 | ERROR | stderr | asyncio.exceptions.CancelledError
+2025-05-15 12:25:36 | ERROR | stderr | 

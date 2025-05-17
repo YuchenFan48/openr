@@ -11,6 +11,7 @@ class ConcatedLMGenResult:
     cumulative_logprob: List[float]
     logp_avg_by_len: List[float]
     finish_reason: List[str]
+    logprobs: List[List[float]]
 
     # post init compute number of completion_tokens
     def __post_init__(self):
@@ -44,6 +45,7 @@ def _generate_fastchat(
         "prompt": query_str,
         "temperature": temperature,
         "n": n,
+        "logprobs": 50,
         "top_p": top_p,
         "top_k": top_k,
         "stop_token_ids": stop_token_ids,
@@ -64,6 +66,7 @@ def _generate_fastchat(
     avg_len_logps = [
         clp / max(1, otl) for clp, otl in zip(cum_logps, output_token_lens)
     ]
+    logprobs = results["logprobs"]
     # return results["text"], avg_len_logps
     return ConcatedLMGenResult(
         text=results["text"],
@@ -71,5 +74,6 @@ def _generate_fastchat(
         num_tokens=results["output_token_len"],
         cumulative_logprob=cum_logps,
         logp_avg_by_len=avg_len_logps,
-        finish_reason=results["finish_reason"],
+        logprobs=logprobs,
+        finish_reason=results["finish_reason"] if isinstance(results["finish_reason"], list) else [results["finish_reason"]],  # type: ignore[assignment]
     )

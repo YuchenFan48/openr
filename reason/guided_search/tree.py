@@ -26,7 +26,7 @@ class Node(object):
     """
 
     def __init__(
-        self, parent: "Node" = None, prior_p: float = 1.0, initial_value: float = 0.0
+        self, parent: "Node" = None, prior_p: float = 1.0, initial_value: float = 0.0, entropy: Optional[float] = 1.0, var_entropy: Optional[float] = 1.0
     ) -> None:
         self._parent = parent
         self._children = {}
@@ -34,7 +34,8 @@ class Node(object):
         self._value_sum = 0
         self.prior_p = prior_p
         self.prior_p_ori = prior_p
-
+        self.entropy = entropy
+        self.var_entropy = var_entropy
         self._initial_value = initial_value
         self._terminated = False
 
@@ -163,13 +164,15 @@ class LanguageNode(Node):
         self,
         parent: Node = None,
         prior_p: float = 1.0,
+        entropy: Optional[float] = 1.0,
+        var_entropy: Optional[float] = 1.0,
         prm_value: Optional[float] = None,
         text_state: Optional[str] = None,
         last_action: Optional[str] = None,
         initial_value: float = 0.0,
         num_generated_token: Optional[int] = None,
     ) -> None:
-        super().__init__(parent, prior_p, initial_value)
+        super().__init__(parent, prior_p, initial_value, entropy, var_entropy)
         self.text_state = text_state
         self.last_action = last_action
         self.prm_value = prm_value
@@ -371,10 +374,14 @@ class SearchTree:
                 env_copy._next_state_terminated = {}
                 assert node.last_action == action
                 env_copy._next_state_terminated[action] = node.terminated
-
-                _, _, terminated, truncated, info = env_copy.step(
-                    action, update_legal_action=node.is_leaf()
-                )
+                if node.entropy < node._parent.entropy:
+                    _, _, terminated, truncated, info = env_copy.step(
+                        action, update_legal_action=node.is_leaf(), deepen=True
+                    )
+                else:
+                    _, _, terminated, truncated, info = env_copy.step(
+                        action, update_legal_action=node.is_leaf(), deepen=False
+                    )
 
                 done = terminated or truncated
 
@@ -641,7 +648,8 @@ class SearchTree:
             (x_action, x_node.prior_p) for x_action, x_node in node.children.items()
         ]
         action_list, prior_list = list(zip(*data_tmp))
-        chosen_action = np.random.choice(action_list, p=np.array(prior_list))
+        # select the maximum prior
+        chosen_action = action_list[np.argmax(prior_list)]
         chosen_node = node.children[chosen_action]
 
         return chosen_action, chosen_node
@@ -720,7 +728,7 @@ class SearchTree:
         assert len(node.children) == 0
         for i, action_dict in enumerate(simulate_env.legal_actions):
             action, prob = action_dict["action"], action_dict["prob"]
-
+            entropy, var_entropy = action_dict.get("entropy", None), action_dict.get("var_entropy", None)
             if self._init_critic_value:
                 child_value = child_values[i]
             else:
@@ -731,6 +739,8 @@ class SearchTree:
             node.children[action] = LanguageNode(
                 parent=node,
                 prior_p=prob,
+                entropy=entropy,
+                var_entropy=var_entropy,
                 #  prm_value=prm_value,
                 text_state=text_state,
                 last_action=action,

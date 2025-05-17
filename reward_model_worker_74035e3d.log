@@ -1,0 +1,105 @@
+2025-05-15 12:25:45 | INFO | reward_model_worker | args: Namespace(host='0.0.0.0', port=30012, worker_address='http://0.0.0.0:30012', controller_address='http://0.0.0.0:28777', model_path='/fs-computility/mabasic/fanyuchen/peiyi9979/math-shepherd-mistral-7b-prm', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2025-05-15 12:25:45 | INFO | reward_model_worker | Loading the model ['math-shepherd-mistral-7b-prm'] on worker 74035e3d ...
+2025-05-15 12:25:46 | ERROR | stderr | Loading checkpoint shards:   0%|                                                  | 0/2 [00:00<?, ?it/s]
+2025-05-15 12:25:59 | ERROR | stderr | Loading checkpoint shards:  50%|█████████████████████                     | 1/2 [00:12<00:12, 12.87s/it]
+2025-05-15 12:26:07 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 2/2 [00:21<00:00, 10.28s/it]
+2025-05-15 12:26:07 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████| 2/2 [00:21<00:00, 10.67s/it]
+2025-05-15 12:26:07 | ERROR | stderr | 
+2025-05-15 12:26:10 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m716893[0m]
+2025-05-15 12:26:10 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-15 12:26:10 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-15 12:26:10 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:30012[0m (Press CTRL+C to quit)
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9253], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9653], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9526], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9243], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52528 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9648, 0.9346], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:17 | INFO | stdout | tensor([0.9648, 0.9502], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52542 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:18 | INFO | stdout | tensor([0.9653, 0.9502, 0.9272], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52558 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:19 | INFO | stdout | tensor([0.9653, 0.9502, 0.9272, 0.9473], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:19 | INFO | stdout | tensor([0.9648, 0.9502, 0.9263, 0.9443], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:19 | INFO | stdout | tensor([0.9648, 0.9502, 0.9263, 0.9590], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52568 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:19 | INFO | stdout | tensor([0.9648, 0.9502, 0.9263, 0.9590, 0.9668], device='cuda:0',
+2025-05-15 12:26:19 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:19 | INFO | stdout | tensor([0.9648, 0.9502, 0.9263, 0.9590, 0.9668], device='cuda:0',
+2025-05-15 12:26:19 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52580 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:20 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9668, 0.9668], device='cuda:0',
+2025-05-15 12:26:20 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52586 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:21 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9668, 0.9663, 0.9126],
+2025-05-15 12:26:21 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:21 | INFO | stdout | tensor([0.9648, 0.9502, 0.9253, 0.9590, 0.9668, 0.9668, 0.9370],
+2025-05-15 12:26:21 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:21 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370],
+2025-05-15 12:26:21 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:21 | INFO | stdout | tensor([0.9648, 0.9502, 0.9253, 0.9590, 0.9668, 0.9668, 0.8989],
+2025-05-15 12:26:21 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52594 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:22 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9458],
+2025-05-15 12:26:22 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:22 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9194],
+2025-05-15 12:26:22 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:22 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9272],
+2025-05-15 12:26:22 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:22 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9370],
+2025-05-15 12:26:22 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52598 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:23 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9458, 0.9419],
+2025-05-15 12:26:23 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:23 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9458, 0.9346],
+2025-05-15 12:26:23 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:23 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9370, 0.9458, 0.9326],
+2025-05-15 12:26:23 | INFO | stdout |        device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52614 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:23 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9590, 0.9673, 0.9668, 0.9365, 0.9458, 0.9419,
+2025-05-15 12:26:23 | INFO | stdout |         0.9541], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:23 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9673, 0.9668, 0.9370, 0.9448, 0.9419,
+2025-05-15 12:26:23 | INFO | stdout |         0.9561], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52628 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:24 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9673, 0.9668, 0.9370, 0.9448, 0.9419,
+2025-05-15 12:26:24 | INFO | stdout |         0.9561, 0.9336], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:24 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9673, 0.9668, 0.9370, 0.9448, 0.9419,
+2025-05-15 12:26:24 | INFO | stdout |         0.9561, 0.9346], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52640 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:24 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9673, 0.9668, 0.9370, 0.9448, 0.9419,
+2025-05-15 12:26:24 | INFO | stdout |         0.9561, 0.9346, 0.9448], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45610 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:25 | INFO | stdout | tensor([0.9648, 0.9502, 0.9272, 0.9585, 0.9673, 0.9668, 0.9370, 0.9448, 0.9419,
+2025-05-15 12:26:25 | INFO | stdout |         0.9561, 0.9346, 0.9448, 0.8965], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45622 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:33 | INFO | stdout | tensor([0.8418], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:33 | INFO | stdout | tensor([0.8481], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:33 | INFO | stdout | tensor([0.8267], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:33 | INFO | stdout | tensor([0.7251], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45638 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:41 | INFO | stdout | tensor([0.8501, 0.8740], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:41 | INFO | stdout | tensor([0.8501, 0.8613], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:41 | INFO | stdout | tensor([0.8501, 0.6260], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:41 | INFO | stdout | tensor([0.8501, 0.8105], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58146 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:42 | INFO | stdout | tensor([0.8501, 0.8740, 0.9370], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:42 | INFO | stdout | tensor([0.8501, 0.8740, 0.9336], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:43 | INFO | stdout | tensor([0.8501, 0.8740, 0.9380], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:43 | INFO | stdout | tensor([0.8501, 0.8740, 0.8438], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58148 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:44 | INFO | stdout | tensor([0.8501, 0.8740, 0.9380, 0.9517], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:44 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.8901], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:44 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.9253], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:44 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.8901], device='cuda:0', dtype=torch.float16)
+2025-05-15 12:26:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58164 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:46 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.9517, 0.9639], device='cuda:0',
+2025-05-15 12:26:46 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:46 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.9517, 0.9629], device='cuda:0',
+2025-05-15 12:26:46 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:46 | INFO | stdout | tensor([0.8481, 0.8740, 0.9380, 0.9517, 0.9663], device='cuda:0',
+2025-05-15 12:26:46 | INFO | stdout |        dtype=torch.float16)
+2025-05-15 12:26:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47726 - "[1mPOST /worker_value_inference HTTP/1.1[0m" [32m200 OK[0m
+2025-05-15 12:26:47 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-15 12:26:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-15 12:26:47 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-15 12:26:47 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m716893[0m]
